@@ -1,12 +1,13 @@
 # MixDocs
 
-**TODO: Add description**
+A mix task to generate Aglio documentation
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `mix_docs` to your list of dependencies in `mix.exs`:
+Needs Aglio to work
+`npm install -g aglio`
 
+Add dependency to your `mix.exs`
 ```elixir
 def deps do
   [
@@ -15,7 +16,16 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/mix_docs](https://hexdocs.pm/mix_docs).
+Create the blueprint file
+`mkdir docs`
+`touch blueprint.apib`
 
+Documentation of aglio can be found here
+https://github.com/danielgtaylor/aglio
+
+## Run
+Generate documentation
+`mix docs`
+
+Generate documentation everytime blueprint.apib changes
+`mix docs --watch`
